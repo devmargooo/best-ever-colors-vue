@@ -1,11 +1,13 @@
 <template>
-<div>
+<div class="wrapper">
   <h1>
     <span class="deeppink">BEST</span>
     <span class="yellow">EVER</span>
     <span class="deeppink">COLORS</span>
   </h1>
-  <ul class="list"></ul>
+  <ul class="list">
+    <li v-for="color in colors">{{color}}</li>
+  </ul>
   <div class="add-color-wrapper">
     <span class="add-color-text crimson">Add color: </span>
     <input type="text"/>
@@ -14,17 +16,24 @@
 </template>
 
 <script>
+import data from '../../static/colors.json'
 export default {
-  
+  data() {
+    return {
+      colors: []
+    }
+  },
+  mounted() {
+    this.colors = data.map(item => item.value);;
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-body {
-	background: deepskyblue;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+.wrapper {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
 }
-
 .list {
 	border: 5px solid gold;
 	width: 250px;

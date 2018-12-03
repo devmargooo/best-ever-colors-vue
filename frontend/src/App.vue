@@ -19,9 +19,4 @@ body {
 	background: deepskyblue;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 </style>
